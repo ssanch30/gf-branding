@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grafiflex Brand Guidelines</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Primary - CMYK Process Colors */
+    --cyan: #00AEEF;
+    --magenta: #EC008C;
+    --yellow: #FFF200;
+
+    /* Extended Gamut - OGV */
+    --orange: #F47920;
+    --green: #00A651;
+    --violet: #662D91;
+
+    /* Neutral Palette */
+    --black: #1A1A1A;
+    --dark-gray: #2D2D2D;
+    --medium-gray: #666666;
+    --gray: #999999;
+    --light-gray: #CCCCCC;
+    --lighter-gray: #E8E8E8;
+    --off-white: #F5F5F5;
+    --white: #FFFFFF;
+
+    /* Functional */
+    --success: #00A651;
+    --warning: #F47920;
+    --error: #EC008C;
+    --info: #00AEEF;
+
+    /* Typography */
+    --font-display: 'Inter', -apple-system, sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--off-white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--black);
+    color: var(--white);
+    padding: 32px 0;
+    overflow-y: auto;
+    z-index: 100;
+    border-right: 1px solid var(--dark-gray);
+  }
+
+  .nav-brand {
+    padding: 0 24px 32px;
+    border-bottom: 1px solid var(--dark-gray);
+    margin-bottom: 24px;
+  }
+
+  .nav-brand h2 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .nav-brand span {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .nav-section {
+    padding: 0 24px;
+    margin-bottom: 24px;
+  }
+
+  .nav-section-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--medium-gray);
+    margin-bottom: 12px;
+  }
+
+  .nav a {
+    display: block;
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 0;
+    transition: color 0.2s;
+    font-weight: 400;
+  }
+
+  .nav a:hover { color: var(--cyan); }
+
+  /* Main Content */
+  .main {
+    margin-left: 260px;
+    padding: 0;
+  }
+
+  /* Hero */
+  .hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 120px 80px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0,174,239,0.05) 30%, rgba(236,0,140,0.05) 60%, rgba(255,242,0,0.03) 100%);
+  }
+
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 .accent { color: var(--cyan); }
+
+  .hero .subtitle {
+    font-size: 18px;
+    color: var(--gray);
+    font-weight: 300;
+    max-width: 500px;
+  }
+
+  .hero .version {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    font-size: 11px;
+    color: var(--medium-gray);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Sections */
+  .section {
+    padding: 80px;
+    border-bottom: 1px solid var(--lighter-gray);
+  }
+
+  .section-dark {
+    background: var(--black);
+    color: var(--white);
+    border-bottom-color: var(--dark-gray);
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+  }
+
+  .section-dark .section-label { color: var(--cyan); }
+
+  .section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .section .section-desc {
+    font-size: 16px;
+    color: var(--medium-gray);
+    max-width: 600px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  .section-dark .section-desc { color: var(--gray); }
+
+  /* Color Grid */
+  .color-group {
+    margin-bottom: 48px;
+  }
+
+  .color-group-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    color: var(--medium-gray);
+  }
+
+  .color-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .color-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .color-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+
+  .color-swatch {
+    height: 120px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .color-swatch .copy-hint {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .color-swatch:hover .copy-hint { opacity: 1; }
+
+  .color-info {
+    padding: 16px;
+  }
+
+  .color-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .color-values {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--medium-gray);
+    line-height: 1.8;
+  }
+
+  /* Logo Section */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .logo-box {
+    border-radius: 12px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    position: relative;
+  }
+
+  .logo-box-dark { background: var(--black); }
+  .logo-box-light { background: var(--white); border: 1px solid var(--lighter-gray); }
+  .logo-box-gray { background: var(--lighter-gray); }
+
+  .logo-box-label {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .logo-svg {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  /* Clear Space */
+  .clearspace-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--lighter-gray);
+    margin-bottom: 24px;
+  }
+
+  .clearspace-box {
+    border: 2px dashed var(--cyan);
+    padding: 40px;
+    position: relative;
+  }
+
+  .clearspace-label {
+    position: absolute;
+    font-size: 10px;
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  /* Typography */
+  .type-specimen {
+    margin-bottom: 48px;
+    padding: 48px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--lighter-gray);
+  }
+
+  .type-specimen-dark {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--dark-gray);
+  }
+
+  .type-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 24px;
+  }
+
+  .type-sample {
+    margin-bottom: 32px;
+  }
+
+  .type-sample .size-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--gray);
+    margin-bottom: 8px;
+  }
+
+  .type-weights {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .weight-sample {
+    padding: 20px;
+    background: var(--off-white);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .weight-sample .weight-name {
+    font-size: 11px;
+    color: var(--gray);
+    margin-top: 8px;
+    font-family: var(--font-mono);
+  }
+
+  /* Component Previews */
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .component-card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--lighter-gray);
+    overflow: hidden;
+  }
+
+  .component-preview {
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    background: var(--off-white);
+  }
+
+  .component-meta {
+    padding: 16px 20px;
+    border-top: 1px solid var(--lighter-gray);
+  }
+
+  .component-meta h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .component-meta p {
+    font-size: 12px;
+    color: var(--medium-gray);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-body);
+  }
+
+  .btn-primary {
+    background: var(--black);
+    color: var(--white);
+  }
+  .btn-primary:hover { background: var(--dark-gray); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--black);
+    border: 2px solid var(--lighter-gray);
+  }
+  .btn-secondary:hover { border-color: var(--black); }
+
+  .btn-accent {
+    background: var(--cyan);
+    color: var(--white);
+  }
+  .btn-accent:hover { background: #009dd6; }
+
+  .btn-sm { padding: 6px 16px; font-size: 12px; }
+  .btn-lg { padding: 14px 32px; font-size: 16px; }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .tag-cyan { background: rgba(0,174,239,0.1); color: var(--cyan); }
+  .tag-magenta { background: rgba(236,0,140,0.1); color: var(--magenta); }
+  .tag-success { background: rgba(0,166,81,0.1); color: var(--green); }
+  .tag-warning { background: rgba(244,121,32,0.1); color: var(--orange); }
+  .tag-neutral { background: var(--lighter-gray); color: var(--medium-gray); }
+
+  /* Input */
+  .input-demo {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid var(--lighter-gray);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: var(--font-body);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+    color: var(--black);
+  }
+
+  .input-demo:focus { border-color: var(--cyan); }
+
+  .input-demo::placeholder { color: var(--light-gray); }
+
+  /* Card */
+  .demo-card {
+    background: var(--white);
+    border: 1px solid var(--lighter-gray);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 300px;
+  }
+
+  .demo-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+  .demo-card p { font-size: 13px; color: var(--medium-gray); margin-bottom: 16px; }
+
+  /* Spacing Scale */
+  .spacing-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  .spacing-bar {
+    height: 24px;
+    background: var(--cyan);
+    border-radius: 4px;
+    opacity: 0.3;
+  }
+
+  .spacing-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--medium-gray);
+    min-width: 80px;
+  }
+
+  .spacing-value {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray);
+    min-width: 50px;
+    text-align: right;
+  }
+
+  /* Do/Don't */
+  .do-dont-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .do-box, .dont-box {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .do-box .indicator {
+    padding: 8px 16px;
+    background: var(--green);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .dont-box .indicator {
+    padding: 8px 16px;
+    background: var(--magenta);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .do-box .content, .dont-box .content {
+    padding: 32px;
+    background: var(--white);
+    border: 1px solid var(--lighter-gray);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Product Brands */
+  .product-card {
+    background: var(--white);
+    border: 1px solid var(--lighter-gray);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 24px;
+  }
+
+  .product-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .product-card .product-tagline {
+    font-size: 14px;
+    color: var(--medium-gray);
+    margin-bottom: 24px;
+  }
+
+  .product-colors {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .product-color-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--lighter-gray);
+  }
+
+  /* Application Mockups */
+  .mockup-browser {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--lighter-gray);
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  .mockup-toolbar {
+    padding: 12px 16px;
+    background: var(--off-white);
+    border-bottom: 1px solid var(--lighter-gray);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mockup-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--lighter-gray);
+  }
+
+  .mockup-url {
+    flex: 1;
+    margin-left: 8px;
+    padding: 4px 12px;
+    background: var(--white);
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--gray);
+    font-family: var(--font-mono);
+  }
+
+  .mockup-content {
+    padding: 32px;
+    min-height: 300px;
+  }
+
+  /* Iconography */
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 16px;
+  }
+
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--lighter-gray);
+  }
+
+  .icon-item svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--black);
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  .icon-item span {
+    font-size: 10px;
+    color: var(--gray);
+  }
+
+  /* Tables */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+
+  .spec-table th {
+    text-align: left;
+    padding: 12px 16px;
+    background: var(--off-white);
+    border-bottom: 2px solid var(--lighter-gray);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--medium-gray);
+  }
+
+  .spec-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--lighter-gray);
+  }
+
+  .spec-table code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    background: var(--off-white);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--cyan);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .nav { display: none; }
+    .main { margin-left: 0; }
+    .section { padding: 48px 24px; }
+    .hero { padding: 80px 24px 60px; }
+    .hero h1 { font-size: 36px; }
+    .logo-grid { grid-template-columns: 1fr; }
+    .do-dont-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Scroll behavior */
+  html { scroll-behavior: smooth; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--light-gray); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
+
+  /* CMY Accent line */
+  .cmy-line {
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan) 0%, var(--cyan) 33%, var(--magenta) 33%, var(--magenta) 66%, var(--yellow) 66%, var(--yellow) 100%);
+  }
+
+  .cmykogv-line {
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan) 0%, var(--cyan) 14.28%, var(--magenta) 14.28%, var(--magenta) 28.57%, var(--yellow) 28.57%, var(--yellow) 42.85%, var(--black) 42.85%, var(--black) 57.14%, var(--orange) 57.14%, var(--orange) 71.42%, var(--green) 71.42%, var(--green) 85.71%, var(--violet) 85.71%, var(--violet) 100%);
+  }
+
+  /* Print token strip */
+  .token-strip {
+    display: flex;
+    gap: 2px;
+    margin: 24px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 8px;
+  }
+
+  .token-strip div { flex: 1; }
+
+  /* Utility */
+  .mt-48 { margin-top: 48px; }
+  .mt-32 { margin-top: 32px; }
+  .mb-32 { margin-bottom: 32px; }
+  .mb-16 { margin-bottom: 16px; }
+  .flex-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .text-mono { font-family: var(--font-mono); }
+  .text-sm { font-size: 13px; }
+  .text-gray { color: var(--medium-gray); }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-brand">
+    <h2>Grafiflex</h2>
+    <span>Brand Guidelines</span>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Foundation</div>
+    <a href="#brand-overview">Brand Overview</a>
+    <a href="#logo">Logo</a>
+    <a href="#colors">Color System</a>
+    <a href="#typography">Typography</a>
+    <a href="#spacing">Spacing &amp; Grid</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Identity</div>
+    <a href="#voice">Voice &amp; Tone</a>
+    <a href="#photography">Photography</a>
+    <a href="#iconography">Iconography</a>
+    <a href="#patterns">Patterns &amp; Textures</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Products</div>
+    <a href="#grafiflex-brand">Grafiflex Corporate</a>
+    <a href="#flexolab">FlexoLab</a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title">Application</div>
+    <a href="#web">Website</a>
+    <a href="#webapp">Web App (FlexoLab)</a>
+    <a href="#documents">Documents</a>
+    <a href="#social">Social Media</a>
+    <a href="#components">UI Components</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main">
+
+  <!-- Hero -->
+  <div class="cmy-line"></div>
+  <section class="hero">
+    <div class="version">v1.0 &middot; Abril 2026</div>
+    <h1>Brand<br>Guide<span class="accent">lines</span></h1>
+    <p class="subtitle">Sistema de identidad visual para Grafiflex y su ecosistema de productos. 30 a&ntilde;os de calidad en la industria flexogr&aacute;fica.</p>
+  </section>
+
+  <!-- Brand Overview -->
+  <section class="section" id="brand-overview">
+    <div class="section-label">01 &mdash; Foundation</div>
+    <h2>Brand Overview</h2>
+    <p class="section-desc">
+      Grafiflex es la preprensa flexogr&aacute;fica n&uacute;mero 1 en Colombia. Nuestra identidad visual refleja precisi&oacute;n, innovaci&oacute;n tecnol&oacute;gica y dominio del color &mdash; los pilares de nuestro trabajo diario.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="product-card">
+        <div class="tag tag-neutral" style="margin-bottom: 16px;">Principio</div>
+        <h3 style="font-size: 18px;">Precisi&oacute;n</h3>
+        <p style="font-size: 13px; color: var(--medium-gray); margin-top: 8px;">Cada punto, cada color, cada medici&oacute;n importa. Nuestra marca refleja el rigor t&eacute;cnico que aplicamos en cada trabajo.</p>
+      </div>
+      <div class="product-card">
+        <div class="tag tag-neutral" style="margin-bottom: 16px;">Principio</div>
+        <h3 style="font-size: 18px;">Innovaci&oacute;n</h3>
+        <p style="font-size: 13px; color: var(--medium-gray); margin-top: 8px;">Tecnolog&iacute;a de punta aplicada a la flexograf&iacute;a. Desde gamut extendido hasta automatizaci&oacute;n de procesos.</p>
+      </div>
+      <div class="product-card">
+        <div class="tag tag-neutral" style="margin-bottom: 16px;">Principio</div>
+        <h3 style="font-size: 18px;">Color</h3>
+        <p style="font-size: 13px; color: var(--medium-gray); margin-top: 8px;">El color es nuestro ADN. CMYK es nuestro lenguaje. OGV es nuestra ventaja competitiva.</p>
+      </div>
+    </div>
+
+    <div class="mt-48">
+      <h3 class="mb-16">Ecosistema de Marca</h3>
+      <table class="spec-table">
+        <tr>
+          <th>Marca</th>
+          <th>Prop&oacute;sito</th>
+          <th>Audiencia</th>
+        </tr>
+        <tr>
+          <td><strong>Grafiflex</strong></td>
+          <td>Marca corporativa. Preprensa flexogr&aacute;fica.</td>
+          <td>Clientes, industria, p&uacute;blico general</td>
+        </tr>
+        <tr>
+          <td><strong>FlexoLab</strong></td>
+          <td>Plataforma interna de operaciones</td>
+          <td>Equipo interno, clientes (portal de aprobaci&oacute;n)</td>
+        </tr>
+        <tr>
+          <td><strong>Grafiflex 30 A&ntilde;os</strong></td>
+          <td>Marca conmemorativa (2025&ndash;2026)</td>
+          <td>Todos los p&uacute;blicos</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Logo -->
+  <section class="section section-dark" id="logo">
+    <div class="section-label">02 &mdash; Logo</div>
+    <h2>Logo System</h2>
+    <p class="section-desc">
+      El logo de Grafiflex est&aacute; compuesto por el s&iacute;mbolo &mdash; un tri&aacute;ngulo formado por tres piezas en Cyan, Magenta y Yellow &mdash; y la tipograf&iacute;a Rustica. El punto sobre la &ldquo;i&rdquo; es un c&iacute;rculo en Cyan, un detalle distintivo de la marca.
+    </p>
+
+    <!-- Logo Variants Grid -->
+    <h3 style="color: var(--white); margin-bottom: 24px;">Variantes del Logo</h3>
+    <div class="logo-grid">
+      <div class="logo-box logo-box-dark">
+        <img src="logo-horizontal-dark-r7.svg" alt="Logo Grafiflex - Horizontal sobre oscuro" style="max-width: 380px; width: 100%;">
+        <div class="logo-box-label" style="color: var(--gray);">Horizontal &mdash; Fondo oscuro</div>
+      </div>
+      <div class="logo-box logo-box-light">
+        <img src="logo-horizontal-light-r7.svg" alt="Logo Grafiflex - Horizontal sobre claro" style="max-width: 380px; width: 100%;">
+        <div class="logo-box-label" style="color: var(--gray);">Horizontal &mdash; Fondo claro</div>
+      </div>
+      <div class="logo-box logo-box-dark" style="min-height: 320px; overflow: hidden;">
+        <object data="logo-vertical-dark-v4.svg" type="image/svg+xml" style="max-width: 220px; width: 100%; max-height: 280px;" aria-label="Logo Grafiflex - Vertical sobre oscuro">
+          <img src="logo-30-vertical-dark.png" alt="Logo Grafiflex - Vertical sobre oscuro" style="max-width: 220px; width: 100%;">
+        </object>
+        <div class="logo-box-label" style="color: var(--gray);">Vertical &mdash; Fondo oscuro</div>
+      </div>
+      <div class="logo-box logo-box-light" style="min-height: 320px; overflow: hidden;">
+        <object data="logo-vertical-light-r2.svg" type="image/svg+xml" style="max-width: 220px; width: 100%; max-height: 280px;" aria-label="Logo Grafiflex - Vertical sobre claro">
+          <img src="logo-30-vertical-light.png" alt="Logo Grafiflex - Vertical sobre claro" style="max-width: 220px; width: 100%;">
+        </object>
+        <div class="logo-box-label" style="color: var(--gray);">Vertical &mdash; Fondo claro</div>
+      </div>
+    </div>
+
+    <!-- Symbol Only -->
+    <div class="mt-32">
+      <h3 style="color: var(--white); margin-bottom: 24px;">S&iacute;mbolo Solo</h3>
+      <div class="logo-grid">
+        <div class="logo-box logo-box-dark" style="min-height: 280px;">
+          <img src="logo-symbol.svg" alt="S&iacute;mbolo Grafiflex" style="max-width: 180px; width: 100%;">
+          <div class="logo-box-label" style="color: var(--gray);">S&iacute;mbolo &mdash; Fondo oscuro</div>
+        </div>
+        <div class="logo-box logo-box-light" style="min-height: 280px;">
+          <img src="logo-symbol.svg" alt="S&iacute;mbolo Grafiflex" style="max-width: 180px; width: 100%;">
+          <div class="logo-box-label" style="color: var(--gray);">S&iacute;mbolo &mdash; Fondo claro</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo Anatomy -->
+    <div class="mt-48">
+      <h3 style="color: var(--white); margin-bottom: 24px;">Anatom&iacute;a del Logo</h3>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+        <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+          <div class="tag tag-cyan" style="margin-bottom: 16px;">S&iacute;mbolo</div>
+          <p style="font-size: 13px; color: var(--light-gray);">Tres piezas geom&eacute;tricas interlazadas que forman una &ldquo;G&rdquo; abstracta y un tri&aacute;ngulo. Cada pieza representa un color proceso: <span style="color: var(--yellow);">Yellow</span> (arriba), <span style="color: var(--magenta);">Magenta</span> (izquierda), <span style="color: var(--cyan);">Cyan</span> (derecha). Incluye reflejos y gradientes met&aacute;licos que le dan profundidad 3D.</p>
+        </div>
+        <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+          <div class="tag tag-cyan" style="margin-bottom: 16px;">Tipograf&iacute;a</div>
+          <p style="font-size: 13px; color: var(--light-gray);"><strong>Rustica Bold Italic</strong> &mdash; tipograf&iacute;a geom&eacute;trica sans-serif con inclinaci&oacute;n, transmite movimiento y dinamismo. El punto sobre la &ldquo;i&rdquo; es un c&iacute;rculo en <span style="color: var(--cyan);">Cyan</span>, un detalle distintivo e irremplazable de la marca. El &reg; se posiciona despu&eacute;s de la &ldquo;x&rdquo;.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 30 Años Variant -->
+    <div class="mt-48">
+      <h3 style="color: var(--white); margin-bottom: 24px;">Versi&oacute;n 30 A&ntilde;os (2025&ndash;2026)</h3>
+      <p style="font-size: 14px; color: var(--gray); margin-bottom: 24px; max-width: 600px;">
+        Logo conmemorativo con el n&uacute;mero &ldquo;30&rdquo; en acabado met&aacute;lico plateado integrado al s&iacute;mbolo. El &ldquo;0&rdquo; del 30 envuelve el tri&aacute;ngulo CMY. Texto &ldquo;A&Ntilde;OS&rdquo; en versal dentro del n&uacute;mero. Disponible en formatos horizontal y vertical, sobre fondo oscuro y claro.
+      </p>
+      <div class="logo-grid">
+        <div class="logo-box logo-box-dark">
+          <img src="logo-30-horizontal-dark.png" alt="Logo 30 Años - Horizontal oscuro" style="max-width: 100%; width: 100%; border-radius: 0;">
+          <div class="logo-box-label" style="color: var(--gray);">30 A&ntilde;os &mdash; Horizontal oscuro</div>
+        </div>
+        <div class="logo-box logo-box-light" style="padding: 0; overflow: hidden;">
+          <img src="logo-30-horizontal-light.png" alt="Logo 30 Años - Horizontal claro" style="max-width: 100%; width: 100%; border-radius: 0;">
+          <div class="logo-box-label" style="color: var(--gray);">30 A&ntilde;os &mdash; Horizontal claro</div>
+        </div>
+        <div class="logo-box logo-box-dark" style="min-height: 320px;">
+          <img src="logo-30-vertical-dark.png" alt="Logo 30 Años - Vertical oscuro" style="max-width: 220px; width: 100%; border-radius: 8px;">
+          <div class="logo-box-label" style="color: var(--gray);">30 A&ntilde;os &mdash; Vertical oscuro</div>
+        </div>
+        <div class="logo-box logo-box-light" style="min-height: 320px;">
+          <img src="logo-30-vertical-light.png" alt="Logo 30 Años - Vertical claro" style="max-width: 220px; width: 100%; border-radius: 8px;">
+          <div class="logo-box-label" style="color: var(--gray);">30 A&ntilde;os &mdash; Vertical claro</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Business Cards -->
+    <div class="mt-48">
+      <h3 style="color: var(--white); margin-bottom: 24px;">Tarjetas de Presentaci&oacute;n</h3>
+      <p style="font-size: 14px; color: var(--gray); margin-bottom: 24px; max-width: 600px;">
+        Cuatro variantes de tarjeta: fondo claro y oscuro, cada una con dos opciones de decoraci&oacute;n lateral usando el tri&aacute;ngulo CMY.
+      </p>
+      <div class="logo-grid">
+        <div class="logo-box" style="padding: 16px; background: var(--dark-gray); min-height: auto;">
+          <img src="biz-card-light-1.png" alt="Tarjeta clara v1" style="max-width: 100%; border-radius: 8px;">
+        </div>
+        <div class="logo-box" style="padding: 16px; background: var(--dark-gray); min-height: auto;">
+          <img src="biz-card-dark-1.png" alt="Tarjeta oscura v1" style="max-width: 100%; border-radius: 8px;">
+        </div>
+        <div class="logo-box" style="padding: 16px; background: var(--dark-gray); min-height: auto;">
+          <img src="biz-card-light-2.png" alt="Tarjeta clara v2" style="max-width: 100%; border-radius: 8px;">
+        </div>
+        <div class="logo-box" style="padding: 16px; background: var(--dark-gray); min-height: auto;">
+          <img src="biz-card-dark-2.png" alt="Tarjeta oscura v2" style="max-width: 100%; border-radius: 8px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo Do's and Don'ts -->
+    <div class="mt-48">
+      <h3 style="color: var(--white); margin-bottom: 24px;">Uso Correcto e Incorrecto</h3>
+      <div class="do-dont-grid">
+        <div class="do-box">
+          <div class="indicator">&#10003; Correcto</div>
+          <div class="content">
+            <div style="text-align: center;">
+              <img src="logo-horizontal-light-r7.svg" alt="Logo correcto" style="max-width: 240px;">
+              <p style="font-size: 12px; color: var(--medium-gray); margin-top: 16px;">Colores originales, proporciones correctas, espacio libre respetado</p>
+            </div>
+          </div>
+        </div>
+        <div class="dont-box">
+          <div class="indicator">&#10007; Incorrecto</div>
+          <div class="content">
+            <div style="text-align: center;">
+              <img src="logo-horizontal-light-r7.svg" alt="Logo incorrecto" style="max-width: 240px; transform: scaleX(1.4); filter: hue-rotate(90deg) saturate(1.5); opacity: 0.8;">
+              <p style="font-size: 12px; color: var(--medium-gray); margin-top: 16px;">No alterar colores, estirar, rotar ni distorsionar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px;">
+        <div style="background: var(--dark-gray); border-radius: 8px; padding: 20px; text-align: center;">
+          <img src="logo-horizontal-dark-r7.svg" alt="" style="max-width: 100px; opacity: 0.3; filter: blur(1px);">
+          <p style="font-size: 11px; color: var(--magenta); margin-top: 8px;">&#10007; No usar baja resoluci&oacute;n</p>
+        </div>
+        <div style="background: var(--dark-gray); border-radius: 8px; padding: 20px; text-align: center;">
+          <img src="logo-horizontal-dark-r7.svg" alt="" style="max-width: 100px; transform: rotate(15deg);">
+          <p style="font-size: 11px; color: var(--magenta); margin-top: 8px;">&#10007; No rotar</p>
+        </div>
+        <div style="background: var(--dark-gray); border-radius: 8px; padding: 20px; text-align: center;">
+          <img src="logo-horizontal-dark-r7.svg" alt="" style="max-width: 100px; filter: grayscale(100%) brightness(0.5);">
+          <p style="font-size: 11px; color: var(--magenta); margin-top: 8px;">&#10007; No oscurecer</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #FF6600, #FF0066); border-radius: 8px; padding: 20px; text-align: center;">
+          <img src="logo-horizontal-dark-r7.svg" alt="" style="max-width: 100px;">
+          <p style="font-size: 11px; color: var(--white); margin-top: 8px;">&#10007; No usar sobre fondos con color que compita</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-48">
+      <h3 style="color: var(--white); margin-bottom: 16px;">Tama&ntilde;o M&iacute;nimo</h3>
+      <table class="spec-table" style="background: var(--dark-gray);">
+        <tr>
+          <th style="background: var(--dark-gray); color: var(--gray); border-color: var(--medium-gray);">Formato</th>
+          <th style="background: var(--dark-gray); color: var(--gray); border-color: var(--medium-gray);">Ancho m&iacute;nimo</th>
+          <th style="background: var(--dark-gray); color: var(--gray); border-color: var(--medium-gray);">Uso</th>
+        </tr>
+        <tr style="color: var(--light-gray);">
+          <td style="border-color: var(--dark-gray);">Logo completo (horizontal)</td>
+          <td style="border-color: var(--dark-gray);"><code>120px</code> / <code>30mm</code></td>
+          <td style="border-color: var(--dark-gray);">Documentos, web, se&ntilde;al&eacute;tica</td>
+        </tr>
+        <tr style="color: var(--light-gray);">
+          <td style="border-color: var(--dark-gray);">S&iacute;mbolo solo</td>
+          <td style="border-color: var(--dark-gray);"><code>24px</code> / <code>8mm</code></td>
+          <td style="border-color: var(--dark-gray);">Favicon, avatar, icono de app</td>
+        </tr>
+        <tr style="color: var(--light-gray);">
+          <td style="border-color: var(--dark-gray);">Logo 30 A&ntilde;os</td>
+          <td style="border-color: var(--dark-gray);"><code>140px</code> / <code>35mm</code></td>
+          <td style="border-color: var(--dark-gray);">Material conmemorativo</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Colors -->
+  <section class="section" id="colors">
+    <div class="section-label">03 &mdash; Color</div>
+    <h2>Color System</h2>
+    <p class="section-desc">
+      Nuestra paleta es predominantemente monocrom&aacute;tica &mdash; grises y negros que transmiten precisi&oacute;n y seriedad &mdash; con acentos puntuales en CMYK y CMYKOGV que revelan nuestra esencia.
+    </p>
+
+    <!-- CMY Accent Strip -->
+    <div class="token-strip">
+      <div style="background: var(--black); flex: 6;"></div>
+      <div style="background: var(--dark-gray); flex: 3;"></div>
+      <div style="background: var(--medium-gray); flex: 2;"></div>
+      <div style="background: var(--light-gray); flex: 2;"></div>
+      <div style="background: var(--off-white); flex: 2;"></div>
+      <div style="background: var(--cyan); flex: 1;"></div>
+      <div style="background: var(--magenta); flex: 0.5;"></div>
+      <div style="background: var(--yellow); flex: 0.3;"></div>
+    </div>
+    <p class="text-sm text-gray mb-32">La proporci&oacute;n visual de la marca: predominantemente gris, con toques de color.</p>
+
+    <!-- Primary Neutral Palette -->
+    <div class="color-group">
+      <div class="color-group-title">Paleta Principal &mdash; Neutros</div>
+      <div class="color-row">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #1A1A1A;" onclick="navigator.clipboard.writeText('#1A1A1A')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Black</div>
+            <div class="color-values">
+              HEX #1A1A1A<br>
+              RGB 26, 26, 26<br>
+              CMYK 0/0/0/100
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #2D2D2D;" onclick="navigator.clipboard.writeText('#2D2D2D')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Dark Gray</div>
+            <div class="color-values">
+              HEX #2D2D2D<br>
+              RGB 45, 45, 45
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #666666;" onclick="navigator.clipboard.writeText('#666666')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Medium Gray</div>
+            <div class="color-values">
+              HEX #666666<br>
+              RGB 102, 102, 102
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #999999;" onclick="navigator.clipboard.writeText('#999999')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Gray</div>
+            <div class="color-values">
+              HEX #999999<br>
+              RGB 153, 153, 153
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #CCCCCC;" onclick="navigator.clipboard.writeText('#CCCCCC')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Light Gray</div>
+            <div class="color-values">
+              HEX #CCCCCC<br>
+              RGB 204, 204, 204
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #F5F5F5; border-bottom: 1px solid #E8E8E8;" onclick="navigator.clipboard.writeText('#F5F5F5')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Off White</div>
+            <div class="color-values">
+              HEX #F5F5F5<br>
+              RGB 245, 245, 245
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CMYK Process -->
+    <div class="color-group">
+      <div class="color-group-title">Acentos &mdash; CMYK Process</div>
+      <div class="color-row">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #00AEEF;" onclick="navigator.clipboard.writeText('#00AEEF')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Cyan</div>
+            <div class="color-values">
+              HEX #00AEEF<br>
+              RGB 0, 174, 239<br>
+              CMYK 100/0/0/0<br>
+              <strong>Acento primario</strong>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #EC008C;" onclick="navigator.clipboard.writeText('#EC008C')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Magenta</div>
+            <div class="color-values">
+              HEX #EC008C<br>
+              RGB 236, 0, 140<br>
+              CMYK 0/100/0/0<br>
+              <strong>Alertas / Errores</strong>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #FFF200;" onclick="navigator.clipboard.writeText('#FFF200')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Yellow</div>
+            <div class="color-values">
+              HEX #FFF200<br>
+              RGB 255, 242, 0<br>
+              CMYK 0/0/100/0<br>
+              <strong>Advertencias</strong>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #1A1A1A;" onclick="navigator.clipboard.writeText('#1A1A1A')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Key (Black)</div>
+            <div class="color-values">
+              HEX #1A1A1A<br>
+              RGB 26, 26, 26<br>
+              CMYK 0/0/0/100
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OGV Extended -->
+    <div class="color-group">
+      <div class="color-group-title">Gamut Extendido &mdash; OGV</div>
+      <div class="color-row">
+        <div class="color-card">
+          <div class="color-swatch" style="background: #F47920;" onclick="navigator.clipboard.writeText('#F47920')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Orange</div>
+            <div class="color-values">
+              HEX #F47920<br>
+              RGB 244, 121, 32<br>
+              <strong>Warnings / En proceso</strong>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #00A651;" onclick="navigator.clipboard.writeText('#00A651')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Green</div>
+            <div class="color-values">
+              HEX #00A651<br>
+              RGB 0, 166, 81<br>
+              <strong>Success / Aprobado</strong>
+            </div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background: #662D91;" onclick="navigator.clipboard.writeText('#662D91')">
+            <span class="copy-hint">Click to copy</span>
+          </div>
+          <div class="color-info">
+            <div class="color-name">Violet</div>
+            <div class="color-values">
+              HEX #662D91<br>
+              RGB 102, 45, 145<br>
+              <strong>Especial / Destacado</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CMYKOGV Strip -->
+    <div class="mt-32">
+      <div class="color-group-title">CMYKOGV Accent Line</div>
+      <div class="cmykogv-line" style="height: 8px; border-radius: 4px;"></div>
+      <p class="text-sm text-gray" style="margin-top: 8px;">Usar como elemento decorativo en headers, dividers y material corporativo.</p>
+    </div>
+
+    <!-- Color Usage Rules -->
+    <div class="mt-48">
+      <h3 class="mb-16">Reglas de Uso</h3>
+      <table class="spec-table">
+        <tr>
+          <th>Regla</th>
+          <th>Gu&iacute;a</th>
+        </tr>
+        <tr>
+          <td><strong>90/10</strong></td>
+          <td>90% de la interfaz en neutros (grises/blanco/negro). 10% en colores CMYK como acentos.</td>
+        </tr>
+        <tr>
+          <td><strong>Cyan como primario</strong></td>
+          <td>Cyan es el color de acci&oacute;n principal: links, botones primarios, estados activos, selecciones.</td>
+        </tr>
+        <tr>
+          <td><strong>OGV para estados</strong></td>
+          <td>Green = &eacute;xito/aprobado. Orange = advertencia/en proceso. Violet = especial/premium.</td>
+        </tr>
+        <tr>
+          <td><strong>Magenta para alertas</strong></td>
+          <td>Usar magenta (no rojo) para errores y alertas cr&iacute;ticas. Es parte de nuestra identidad CMYK.</td>
+        </tr>
+        <tr>
+          <td><strong>Yellow con precauci&oacute;n</strong></td>
+          <td>Yellow tiene bajo contraste. Usar solo sobre fondos oscuros o como acento peque&ntilde;o.</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="section section-dark" id="typography">
+    <div class="section-label">04 &mdash; Typography</div>
+    <h2>Tipograf&iacute;a</h2>
+    <p class="section-desc">
+      Rustica para el logotipo. Inter para todo lo dem&aacute;s. JetBrains Mono para datos t&eacute;cnicos y c&oacute;digo. Un sistema limpio, legible y moderno.
+    </p>
+
+    <!-- Display Font -->
+    <div class="type-specimen type-specimen-dark">
+      <div class="type-label">Logo &mdash; Rustica</div>
+      <div class="type-sample">
+        <div class="size-label">Uso exclusivo del logotipo</div>
+        <div style="font-size: 48px; font-weight: 800; letter-spacing: -0.02em;">Grafiflex</div>
+      </div>
+      <p style="font-size: 13px; color: var(--gray);">Rustica es la tipograf&iacute;a propietaria del logo. No usar en otros contextos de la marca. Para t&iacute;tulos y cuerpo de texto, usar Inter.</p>
+    </div>
+
+    <!-- UI Font -->
+    <div class="type-specimen type-specimen-dark" style="margin-top: 24px;">
+      <div class="type-label">UI &amp; Body &mdash; Inter</div>
+
+      <div class="type-sample">
+        <div class="size-label">Display &mdash; 48px / Bold</div>
+        <div style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em;">Pasi&oacute;n por tu Mejor Impresi&oacute;n</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="size-label">H1 &mdash; 36px / Bold</div>
+        <div style="font-size: 36px; font-weight: 700; letter-spacing: -0.02em;">Gesti&oacute;n de Color</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="size-label">H2 &mdash; 24px / Semibold</div>
+        <div style="font-size: 24px; font-weight: 600;">Fotopol&iacute;meros Digitales</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="size-label">H3 &mdash; 18px / Semibold</div>
+        <div style="font-size: 18px; font-weight: 600;">Gamut Extendido de Color</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="size-label">Body &mdash; 14px / Regular</div>
+        <div style="font-size: 14px; font-weight: 400; line-height: 1.7; max-width: 600px;">
+          En Grafiflex medimos tus impresos de manera que las pruebas de color que tus clientes aprueben sean entre un 90% y 95% iguales a tu impresi&oacute;n final. Gana tranquilidad, productividad y econom&iacute;a en desperdicio y reprocesos.
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="size-label">Caption &mdash; 12px / Medium</div>
+        <div style="font-size: 12px; font-weight: 500; color: var(--gray);">Orden #GF-2026-0418 &middot; Estado: En producci&oacute;n &middot; Cliente: Pl&aacute;sticos G&amp;C S.A.S.</div>
+      </div>
+
+      <div class="type-weights" style="margin-top: 40px;">
+        <div class="weight-sample" style="background: var(--dark-gray);">
+          <div style="font-size: 28px; font-weight: 300;">Aa</div>
+          <div class="weight-name">Light 300</div>
+        </div>
+        <div class="weight-sample" style="background: var(--dark-gray);">
+          <div style="font-size: 28px; font-weight: 400;">Aa</div>
+          <div class="weight-name">Regular 400</div>
+        </div>
+        <div class="weight-sample" style="background: var(--dark-gray);">
+          <div style="font-size: 28px; font-weight: 500;">Aa</div>
+          <div class="weight-name">Medium 500</div>
+        </div>
+        <div class="weight-sample" style="background: var(--dark-gray);">
+          <div style="font-size: 28px; font-weight: 600;">Aa</div>
+          <div class="weight-name">Semibold 600</div>
+        </div>
+        <div class="weight-sample" style="background: var(--dark-gray);">
+          <div style="font-size: 28px; font-weight: 700;">Aa</div>
+          <div class="weight-name">Bold 700</div>
+        </div>
+        <div class="weight-sample" style="background: var(--dark-gray);">
+          <div style="font-size: 28px; font-weight: 800;">Aa</div>
+          <div class="weight-name">ExtraBold 800</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mono Font -->
+    <div class="type-specimen type-specimen-dark" style="margin-top: 24px;">
+      <div class="type-label">Data &amp; Code &mdash; JetBrains Mono</div>
+      <div class="type-sample">
+        <div style="font-family: var(--font-mono); font-size: 14px; line-height: 2; color: var(--light-gray);">
+          <span style="color: var(--cyan);">&Delta;E</span> = 2.3 &nbsp;&middot;&nbsp;
+          <span style="color: var(--magenta);">L*a*b*</span> 54.2 / -12.8 / 36.1 &nbsp;&middot;&nbsp;
+          <span style="color: var(--green);">PASS</span><br>
+          Orden: <span style="color: var(--cyan);">GF-2026-0418</span> &nbsp;&middot;&nbsp;
+          Ganancia: <span style="color: var(--orange);">18%</span> &nbsp;&middot;&nbsp;
+          LPI: <span style="color: var(--light-gray);">133</span>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: var(--gray);">Usar para datos colorim&eacute;tricos, c&oacute;digos de orden, mediciones, y cualquier dato t&eacute;cnico.</p>
+    </div>
+  </section>
+
+  <!-- Spacing -->
+  <section class="section" id="spacing">
+    <div class="section-label">05 &mdash; Spacing</div>
+    <h2>Spacing &amp; Grid</h2>
+    <p class="section-desc">
+      Sistema de espaciado basado en m&uacute;ltiplos de 4px. Consistencia en todos los productos.
+    </p>
+
+    <div style="max-width: 500px;">
+      <div class="spacing-row">
+        <div class="spacing-label">4px</div>
+        <div class="spacing-bar" style="width: 4px;"></div>
+        <div class="spacing-value">xs</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">8px</div>
+        <div class="spacing-bar" style="width: 8px;"></div>
+        <div class="spacing-value">sm</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">12px</div>
+        <div class="spacing-bar" style="width: 12px;"></div>
+        <div class="spacing-value">md</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">16px</div>
+        <div class="spacing-bar" style="width: 16px;"></div>
+        <div class="spacing-value">base</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">24px</div>
+        <div class="spacing-bar" style="width: 24px;"></div>
+        <div class="spacing-value">lg</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">32px</div>
+        <div class="spacing-bar" style="width: 32px;"></div>
+        <div class="spacing-value">xl</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">48px</div>
+        <div class="spacing-bar" style="width: 48px;"></div>
+        <div class="spacing-value">2xl</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">64px</div>
+        <div class="spacing-bar" style="width: 64px;"></div>
+        <div class="spacing-value">3xl</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">80px</div>
+        <div class="spacing-bar" style="width: 80px;"></div>
+        <div class="spacing-value">4xl</div>
+      </div>
+    </div>
+
+    <div class="mt-48">
+      <h3 class="mb-16">Border Radius</h3>
+      <div class="flex-row" style="gap: 24px;">
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: var(--lighter-gray); border-radius: 4px;"></div>
+          <div class="text-mono text-sm text-gray" style="margin-top: 8px;">4px</div>
+          <div class="text-sm text-gray">Botones sm</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: var(--lighter-gray); border-radius: 8px;"></div>
+          <div class="text-mono text-sm text-gray" style="margin-top: 8px;">8px</div>
+          <div class="text-sm text-gray">Botones, inputs</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: var(--lighter-gray); border-radius: 12px;"></div>
+          <div class="text-mono text-sm text-gray" style="margin-top: 8px;">12px</div>
+          <div class="text-sm text-gray">Cards</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: var(--lighter-gray); border-radius: 16px;"></div>
+          <div class="text-mono text-sm text-gray" style="margin-top: 8px;">16px</div>
+          <div class="text-sm text-gray">Modals</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: var(--lighter-gray); border-radius: 50%;"></div>
+          <div class="text-mono text-sm text-gray" style="margin-top: 8px;">50%</div>
+          <div class="text-sm text-gray">Avatars, dots</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voice & Tone -->
+  <section class="section section-dark" id="voice">
+    <div class="section-label">06 &mdash; Voice &amp; Tone</div>
+    <h2>Voz &amp; Tono</h2>
+    <p class="section-desc">
+      La voz de Grafiflex es t&eacute;cnica pero accesible. Hablamos con autoridad sobre flexograf&iacute;a porque llevamos 30 a&ntilde;os haci&eacute;ndolo.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="tag tag-cyan" style="margin-bottom: 16px;">Somos</div>
+        <ul style="list-style: none; font-size: 14px; color: var(--light-gray); line-height: 2.2;">
+          <li>&#10003; T&eacute;cnicos con claridad</li>
+          <li>&#10003; Directos y concisos</li>
+          <li>&#10003; Apasionados por la calidad</li>
+          <li>&#10003; Innovadores pero pr&aacute;cticos</li>
+          <li>&#10003; Colaborativos con nuestros clientes</li>
+        </ul>
+      </div>
+      <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="tag tag-magenta" style="margin-bottom: 16px;">No somos</div>
+        <ul style="list-style: none; font-size: 14px; color: var(--light-gray); line-height: 2.2;">
+          <li>&#10007; Excesivamente corporativos</li>
+          <li>&#10007; Vagos o ambiguos</li>
+          <li>&#10007; Complicados sin necesidad</li>
+          <li>&#10007; Distantes o fr&iacute;os</li>
+          <li>&#10007; Vendedores agresivos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography -->
+  <section class="section" id="photography">
+    <div class="section-label">07 &mdash; Photography</div>
+    <h2>Fotograf&iacute;a</h2>
+    <p class="section-desc">
+      Las im&aacute;genes deben transmitir precisi&oacute;n t&eacute;cnica y el mundo del color. Preferir im&aacute;genes reales del proceso de producci&oacute;n sobre stock gen&eacute;rico.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="product-card">
+        <h4 style="font-size: 15px;">Tratamiento</h4>
+        <p style="font-size: 13px; color: var(--medium-gray); margin-top: 8px;">Alto contraste, ligeramente desaturadas. El color debe venir del producto impreso, no del ambiente.</p>
+      </div>
+      <div class="product-card">
+        <h4 style="font-size: 15px;">Sujetos</h4>
+        <p style="font-size: 13px; color: var(--medium-gray); margin-top: 8px;">Close-ups de planchas, pruebas de color, mediciones con densit&oacute;metro, maquinaria en acci&oacute;n.</p>
+      </div>
+      <div class="product-card">
+        <h4 style="font-size: 15px;">Evitar</h4>
+        <p style="font-size: 13px; color: var(--medium-gray); margin-top: 8px;">Stock gen&eacute;rico de oficinas. Im&aacute;genes sobre-saturadas. Fotos de baja resoluci&oacute;n o con ruido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Iconography -->
+  <section class="section section-dark" id="iconography">
+    <div class="section-label">08 &mdash; Iconography</div>
+    <h2>Iconograf&iacute;a</h2>
+    <p class="section-desc">
+      &Iacute;conos de l&iacute;nea (stroke), 1.5px de grosor, esquinas redondeadas. Preferir Lucide Icons o Phosphor Icons para consistencia.
+    </p>
+
+    <table class="spec-table" style="max-width: 400px; background: var(--dark-gray);">
+      <tr>
+        <th style="background: var(--dark-gray); color: var(--gray); border-color: var(--medium-gray);">Propiedad</th>
+        <th style="background: var(--dark-gray); color: var(--gray); border-color: var(--medium-gray);">Valor</th>
+      </tr>
+      <tr style="color: var(--light-gray);">
+        <td style="border-color: var(--dark-gray);">Stroke width</td>
+        <td style="border-color: var(--dark-gray);"><code>1.5px</code></td>
+      </tr>
+      <tr style="color: var(--light-gray);">
+        <td style="border-color: var(--dark-gray);">Tama&ntilde;os</td>
+        <td style="border-color: var(--dark-gray);"><code>16px</code> <code>20px</code> <code>24px</code></td>
+      </tr>
+      <tr style="color: var(--light-gray);">
+        <td style="border-color: var(--dark-gray);">Color default</td>
+        <td style="border-color: var(--dark-gray);"><code>#666666</code></td>
+      </tr>
+      <tr style="color: var(--light-gray);">
+        <td style="border-color: var(--dark-gray);">Color activo</td>
+        <td style="border-color: var(--dark-gray);"><code>#00AEEF</code> (Cyan)</td>
+      </tr>
+      <tr style="color: var(--light-gray);">
+        <td style="border-color: var(--dark-gray);">Librer&iacute;a</td>
+        <td style="border-color: var(--dark-gray);">Lucide Icons</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Patterns -->
+  <section class="section" id="patterns">
+    <div class="section-label">09 &mdash; Patterns</div>
+    <h2>Patrones &amp; Texturas</h2>
+    <p class="section-desc">
+      Elementos gr&aacute;ficos sutiles que refuerzan la identidad sin competir con el contenido.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="product-card" style="padding: 0; overflow: hidden;">
+        <div style="height: 160px; background: var(--black); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+          <!-- Dot pattern -->
+          <svg width="100%" height="100%" style="position: absolute; opacity: 0.1;">
+            <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="10" cy="10" r="2" fill="white"/>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#dots)"/>
+          </svg>
+          <span style="font-size: 12px; color: var(--gray); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; z-index: 1;">Halftone Dots</span>
+        </div>
+        <div style="padding: 16px;">
+          <p style="font-size: 12px; color: var(--medium-gray);">Patr&oacute;n de puntos (referencia a la trama flexogr&aacute;fica). Usar a baja opacidad como fondo.</p>
+        </div>
+      </div>
+      <div class="product-card" style="padding: 0; overflow: hidden;">
+        <div style="height: 160px; display: flex; align-items: center; justify-content: center;">
+          <div class="cmykogv-line" style="width: 80%; height: 4px; border-radius: 2px;"></div>
+        </div>
+        <div style="padding: 16px;">
+          <p style="font-size: 12px; color: var(--medium-gray);">L&iacute;nea CMYKOGV como separador decorativo. Usar en headers, footers y divisiones de secci&oacute;n.</p>
+        </div>
+      </div>
+      <div class="product-card" style="padding: 0; overflow: hidden;">
+        <div style="height: 160px; background: linear-gradient(135deg, var(--off-white) 0%, #E0E0E0 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+          <div style="position: absolute; top: 20px; right: 20px; width: 60px; height: 60px; border: 2px solid var(--cyan); border-radius: 50%; opacity: 0.3;"></div>
+          <div style="position: absolute; bottom: 20px; left: 30px; width: 30px; height: 30px; background: var(--magenta); opacity: 0.08; border-radius: 50%;"></div>
+          <span style="font-size: 12px; color: var(--gray); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Registration Marks</span>
+        </div>
+        <div style="padding: 16px;">
+          <p style="font-size: 12px; color: var(--medium-gray);">Marcas de registro estilizadas como elementos decorativos sutiles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grafiflex Corporate -->
+  <section class="section section-dark" id="grafiflex-brand">
+    <div class="section-label">10 &mdash; Products</div>
+    <h2>Grafiflex Corporate</h2>
+    <p class="section-desc">La marca madre. Se usa en el sitio web p&uacute;blico, material comercial, presentaciones, y comunicaciones externas.</p>
+
+    <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+      <div class="flex-row" style="justify-content: space-between; align-items: flex-start;">
+        <div>
+          <h3 style="color: var(--white);">Grafiflex</h3>
+          <p class="product-tagline" style="color: var(--gray);">Pasi&oacute;n por tu Mejor Impresi&oacute;n</p>
+          <div class="flex-row">
+            <span class="tag tag-neutral">Website</span>
+            <span class="tag tag-neutral">Docs</span>
+            <span class="tag tag-neutral">Presentaciones</span>
+            <span class="tag tag-neutral">Video</span>
+          </div>
+        </div>
+        <div class="product-colors">
+          <div class="product-color-dot" style="background: var(--black);"></div>
+          <div class="product-color-dot" style="background: var(--dark-gray);"></div>
+          <div class="product-color-dot" style="background: var(--off-white);"></div>
+          <div class="product-color-dot" style="background: var(--cyan);"></div>
+          <div class="product-color-dot" style="background: var(--magenta);"></div>
+          <div class="product-color-dot" style="background: var(--yellow);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FlexoLab -->
+  <section class="section" id="flexolab">
+    <div class="section-label">11 &mdash; Product Brand</div>
+    <h2>FlexoLab</h2>
+    <p class="section-desc">
+      La plataforma interna de operaciones. Su identidad hereda de Grafiflex pero tiene su propio car&aacute;cter: m&aacute;s t&eacute;cnico, m&aacute;s funcional, m&aacute;s data-driven.
+    </p>
+
+    <div class="product-card">
+      <div class="flex-row" style="justify-content: space-between; align-items: flex-start;">
+        <div>
+          <div style="font-size: 28px; font-weight: 800; letter-spacing: -0.02em;">
+            Flexo<span style="color: var(--cyan);">Lab</span>
+          </div>
+          <p class="product-tagline">Where we measure, test, and perfect.</p>
+          <div class="flex-row" style="margin-top: 8px;">
+            <span class="tag tag-cyan">Web App</span>
+            <span class="tag tag-neutral">Internal</span>
+            <span class="tag tag-neutral">Portal Clientes</span>
+          </div>
+        </div>
+        <div class="product-colors">
+          <div class="product-color-dot" style="background: var(--off-white);"></div>
+          <div class="product-color-dot" style="background: var(--lighter-gray);"></div>
+          <div class="product-color-dot" style="background: var(--black);"></div>
+          <div class="product-color-dot" style="background: var(--cyan);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-32">
+      <h3 class="mb-16">FlexoLab &mdash; Variaciones del Nombre</h3>
+      <table class="spec-table">
+        <tr>
+          <th>Uso</th>
+          <th>Formato</th>
+          <th>Ejemplo</th>
+        </tr>
+        <tr>
+          <td>Logotipo</td>
+          <td><strong>FlexoLab</strong> (camelCase con F y L may&uacute;sculas)</td>
+          <td><code>FlexoLab</code></td>
+        </tr>
+        <tr>
+          <td>URL</td>
+          <td>Todo min&uacute;sculas</td>
+          <td><code>flexolab.grafiflex.com</code></td>
+        </tr>
+        <tr>
+          <td>En texto corrido</td>
+          <td>FlexoLab (siempre con las dos may&uacute;sculas)</td>
+          <td>&ldquo;Ingresa a FlexoLab para ver tu orden.&rdquo;</td>
+        </tr>
+        <tr>
+          <td>Con marca madre</td>
+          <td>Grafiflex FlexoLab</td>
+          <td>&ldquo;Powered by Grafiflex FlexoLab&rdquo;</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Website -->
+  <section class="section section-dark" id="web">
+    <div class="section-label">12 &mdash; Application</div>
+    <h2>Website</h2>
+    <p class="section-desc">Directrices para grafiflex.com. El sitio web debe sentirse premium, t&eacute;cnico y moderno.</p>
+
+    <div class="mockup-browser" style="border-color: var(--dark-gray);">
+      <div class="mockup-toolbar" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="mockup-dot" style="background: #EC008C;"></div>
+        <div class="mockup-dot" style="background: #FFF200;"></div>
+        <div class="mockup-dot" style="background: #00A651;"></div>
+        <div class="mockup-url" style="background: var(--black);">grafiflex.com</div>
+      </div>
+      <div class="mockup-content" style="background: var(--black); color: var(--white); padding: 48px;">
+        <div class="cmy-line" style="margin-bottom: 32px; border-radius: 2px;"></div>
+        <div style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); margin-bottom: 12px;">Preprensa Flexogr&aacute;fica</div>
+        <div style="font-size: 36px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px;">30 a&ntilde;os de<br>calidad en Colombia</div>
+        <div style="font-size: 14px; color: var(--gray); max-width: 400px; margin-bottom: 24px;">Fotopol&iacute;meros, gesti&oacute;n de color y gamut extendido para la industria del empaque flexible.</div>
+        <div class="flex-row">
+          <button class="btn btn-accent">Con&oacute;cenos</button>
+          <button class="btn btn-secondary" style="color: var(--white); border-color: var(--medium-gray);">Ver Soluciones</button>
+        </div>
+        <div style="margin-top: 32px; font-family: var(--font-mono); font-size: 11px; color: var(--medium-gray);">
+          Envigado &middot; Barranquilla &middot; Cali &middot; <span style="color: var(--cyan);">Bogot&aacute; DC</span> <span class="tag tag-cyan" style="font-size: 9px; padding: 2px 6px;">NUEVO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web App -->
+  <section class="section" id="webapp">
+    <div class="section-label">13 &mdash; Web App</div>
+    <h2>FlexoLab UI</h2>
+    <p class="section-desc">Directrices de interfaz para la plataforma FlexoLab. Basada en MUI v7 con React-admin v5.</p>
+
+    <div class="mockup-browser">
+      <div class="mockup-toolbar">
+        <div class="mockup-dot"></div>
+        <div class="mockup-dot"></div>
+        <div class="mockup-dot"></div>
+        <div class="mockup-url">flexolab.grafiflex.com</div>
+      </div>
+      <div class="mockup-content" style="background: var(--off-white); padding: 0;">
+        <div style="display: flex; height: 300px;">
+          <!-- Sidebar -->
+          <div style="width: 220px; background: var(--black); padding: 20px 16px; flex-shrink: 0;">
+            <div style="font-size: 16px; font-weight: 800; color: var(--white); margin-bottom: 4px;">Flexo<span style="color: var(--cyan);">Lab</span></div>
+            <div style="font-size: 10px; color: var(--medium-gray); margin-bottom: 24px;">by Grafiflex</div>
+            <div style="font-size: 12px; color: var(--gray); padding: 8px 0; border-left: 2px solid var(--cyan); padding-left: 12px; color: var(--white);">&Oacute;rdenes</div>
+            <div style="font-size: 12px; color: var(--gray); padding: 8px 0; padding-left: 14px;">Producci&oacute;n</div>
+            <div style="font-size: 12px; color: var(--gray); padding: 8px 0; padding-left: 14px;">Inventario</div>
+            <div style="font-size: 12px; color: var(--gray); padding: 8px 0; padding-left: 14px;">Facturaci&oacute;n</div>
+            <div style="font-size: 12px; color: var(--gray); padding: 8px 0; padding-left: 14px;">Clientes</div>
+            <div style="font-size: 12px; color: var(--gray); padding: 8px 0; padding-left: 14px;">Bibliotecas</div>
+          </div>
+          <!-- Main -->
+          <div style="flex: 1; padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <div style="font-size: 18px; font-weight: 700;">&Oacute;rdenes</div>
+              <button class="btn btn-primary btn-sm">+ Nueva Orden</button>
+            </div>
+            <div style="background: var(--white); border-radius: 8px; border: 1px solid var(--lighter-gray); overflow: hidden;">
+              <div style="display: grid; grid-template-columns: 1fr 2fr 1fr 1fr 1fr; padding: 10px 16px; font-size: 11px; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--lighter-gray);">
+                <div>Orden</div><div>Cliente</div><div>Estado</div><div>&Delta;E</div><div>Fecha</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 2fr 1fr 1fr 1fr; padding: 12px 16px; font-size: 13px; border-bottom: 1px solid var(--lighter-gray); align-items: center;">
+                <div style="font-family: var(--font-mono); color: var(--cyan); font-size: 12px;">GF-0418</div>
+                <div>Pl&aacute;sticos G&amp;C</div>
+                <div><span class="tag tag-success" style="font-size: 10px;">Aprobado</span></div>
+                <div style="font-family: var(--font-mono); font-size: 12px;">1.8</div>
+                <div style="color: var(--gray); font-size: 12px;">18 Abr</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 2fr 1fr 1fr 1fr; padding: 12px 16px; font-size: 13px; border-bottom: 1px solid var(--lighter-gray); align-items: center;">
+                <div style="font-family: var(--font-mono); color: var(--cyan); font-size: 12px;">GF-0417</div>
+                <div>Adhesivos Gr&aacute;ficos</div>
+                <div><span class="tag tag-warning" style="font-size: 10px;">En proceso</span></div>
+                <div style="font-family: var(--font-mono); font-size: 12px;">3.2</div>
+                <div style="color: var(--gray); font-size: 12px;">17 Abr</div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 2fr 1fr 1fr 1fr; padding: 12px 16px; font-size: 13px; align-items: center;">
+                <div style="font-family: var(--font-mono); color: var(--cyan); font-size: 12px;">GF-0416</div>
+                <div>Famiflex</div>
+                <div><span class="tag tag-magenta" style="font-size: 10px;">Revisar</span></div>
+                <div style="font-family: var(--font-mono); font-size: 12px;">5.1</div>
+                <div style="color: var(--gray); font-size: 12px;">16 Abr</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-48">
+      <h3 class="mb-16">Tema MUI &mdash; Tokens</h3>
+      <table class="spec-table">
+        <tr>
+          <th>Token</th>
+          <th>Valor</th>
+          <th>Uso</th>
+        </tr>
+        <tr>
+          <td><code>palette.primary</code></td>
+          <td><code>#00AEEF</code> Cyan</td>
+          <td>Botones, links, selecciones, indicadores activos</td>
+        </tr>
+        <tr>
+          <td><code>palette.secondary</code></td>
+          <td><code>#1A1A1A</code> Black</td>
+          <td>Botones secundarios, sidebar</td>
+        </tr>
+        <tr>
+          <td><code>palette.error</code></td>
+          <td><code>#EC008C</code> Magenta</td>
+          <td>Errores, alertas cr&iacute;ticas, validaciones</td>
+        </tr>
+        <tr>
+          <td><code>palette.warning</code></td>
+          <td><code>#F47920</code> Orange</td>
+          <td>Advertencias, estados pendientes</td>
+        </tr>
+        <tr>
+          <td><code>palette.success</code></td>
+          <td><code>#00A651</code> Green</td>
+          <td>&Eacute;xito, aprobado, completado</td>
+        </tr>
+        <tr>
+          <td><code>palette.info</code></td>
+          <td><code>#00AEEF</code> Cyan</td>
+          <td>Informaci&oacute;n, tooltips</td>
+        </tr>
+        <tr>
+          <td><code>palette.background</code></td>
+          <td><code>#F5F5F5</code> Off White</td>
+          <td>Fondo principal de la app</td>
+        </tr>
+        <tr>
+          <td><code>shape.borderRadius</code></td>
+          <td><code>8</code></td>
+          <td>Radio por defecto de componentes</td>
+        </tr>
+        <tr>
+          <td><code>typography.fontFamily</code></td>
+          <td><code>'Inter', sans-serif</code></td>
+          <td>Tipograf&iacute;a global</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section class="section section-dark" id="documents">
+    <div class="section-label">14 &mdash; Documents</div>
+    <h2>Documentos</h2>
+    <p class="section-desc">Lineamientos para facturas, cotizaciones, reportes, y documentaci&oacute;n t&eacute;cnica generada desde FlexoLab.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="tag tag-cyan" style="margin-bottom: 16px;">Header</div>
+        <p style="font-size: 13px; color: var(--light-gray);">Logo Grafiflex a la izquierda. L&iacute;nea CMY debajo del header. Datos de contacto en gris claro.</p>
+      </div>
+      <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="tag tag-cyan" style="margin-bottom: 16px;">Cuerpo</div>
+        <p style="font-size: 13px; color: var(--light-gray);">Inter 10pt para cuerpo. Tablas con bordes en #E8E8E8. Headers de tabla en #F5F5F5 con texto en #666.</p>
+      </div>
+      <div class="product-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="tag tag-cyan" style="margin-bottom: 16px;">Footer</div>
+        <p style="font-size: 13px; color: var(--light-gray);">L&iacute;nea CMYKOGV. Direcciones de las 4 sedes. &ldquo;Powered by FlexoLab&rdquo; en gris discreto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <section class="section" id="social">
+    <div class="section-label">15 &mdash; Social Media</div>
+    <h2>Redes Sociales</h2>
+    <p class="section-desc">Templates y reglas para mantener coherencia en Instagram, LinkedIn, y otras plataformas.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <div class="product-card">
+        <h4 style="font-size: 15px; margin-bottom: 12px;">Posts Informativos</h4>
+        <div style="background: var(--black); border-radius: 8px; padding: 32px; text-align: center; margin-bottom: 12px;">
+          <div class="cmy-line" style="width: 40px; margin: 0 auto 16px; border-radius: 2px;"></div>
+          <div style="font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 8px;">T&iacute;tulo del Post</div>
+          <div style="font-size: 12px; color: var(--gray);">Subt&iacute;tulo o dato relevante</div>
+        </div>
+        <p style="font-size: 12px; color: var(--medium-gray);">Fondo negro, tipograf&iacute;a blanca, acento CMY como l&iacute;nea decorativa.</p>
+      </div>
+      <div class="product-card">
+        <h4 style="font-size: 15px; margin-bottom: 12px;">Posts T&eacute;cnicos</h4>
+        <div style="background: var(--off-white); border-radius: 8px; padding: 32px; text-align: center; margin-bottom: 12px; border: 1px solid var(--lighter-gray);">
+          <div style="font-family: var(--font-mono); font-size: 24px; font-weight: 700; color: var(--cyan); margin-bottom: 4px;">&Delta;E &lt; 2.0</div>
+          <div style="font-size: 12px; color: var(--medium-gray);">Tolerancia colorim&eacute;trica</div>
+        </div>
+        <p style="font-size: 12px; color: var(--medium-gray);">Fondo claro, datos en mono, acento cyan. Ideal para datos t&eacute;cnicos y logros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- UI Components -->
+  <section class="section section-dark" id="components">
+    <div class="section-label">16 &mdash; Components</div>
+    <h2>UI Components</h2>
+    <p class="section-desc">Componentes reutilizables para FlexoLab y el sitio web. Basados en el sistema de dise&ntilde;o.</p>
+
+    <div class="component-grid">
+      <!-- Buttons -->
+      <div class="component-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="component-preview" style="background: var(--dark-gray); flex-direction: column; gap: 12px;">
+          <div class="flex-row">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-accent">Accent</button>
+            <button class="btn btn-secondary" style="color: var(--white); border-color: var(--medium-gray);">Secondary</button>
+          </div>
+          <div class="flex-row">
+            <button class="btn btn-primary btn-sm">Small</button>
+            <button class="btn btn-accent btn-sm">Small</button>
+          </div>
+        </div>
+        <div class="component-meta" style="border-color: var(--medium-gray);">
+          <h4 style="color: var(--white);">Buttons</h4>
+          <p style="color: var(--gray);">Primary (negro), Accent (cyan), Secondary (outline)</p>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="component-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="component-preview" style="background: var(--dark-gray);">
+          <div class="flex-row">
+            <span class="tag tag-cyan">Info</span>
+            <span class="tag tag-success">Aprobado</span>
+            <span class="tag tag-warning">Pendiente</span>
+            <span class="tag tag-magenta">Error</span>
+            <span class="tag tag-neutral">Default</span>
+          </div>
+        </div>
+        <div class="component-meta" style="border-color: var(--medium-gray);">
+          <h4 style="color: var(--white);">Status Tags</h4>
+          <p style="color: var(--gray);">Estados de &oacute;rdenes, alertas y categor&iacute;as</p>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="component-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="component-preview" style="background: var(--dark-gray); flex-direction: column; gap: 8px; align-items: stretch; padding: 24px 32px;">
+          <label style="font-size: 12px; font-weight: 500; color: var(--gray);">N&uacute;mero de Orden</label>
+          <input class="input-demo" placeholder="GF-2026-..." value="GF-2026-0418" style="background: var(--dark-gray); color: var(--white); border-color: var(--medium-gray);" readonly>
+        </div>
+        <div class="component-meta" style="border-color: var(--medium-gray);">
+          <h4 style="color: var(--white);">Text Input</h4>
+          <p style="color: var(--gray);">Outlined, dense, focus border en cyan</p>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="component-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="component-preview" style="background: var(--dark-gray);">
+          <div class="demo-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+            <div class="flex-row mb-16">
+              <span class="tag tag-success" style="font-size: 10px;">Aprobado</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--gray);">&Delta;E 1.8</span>
+            </div>
+            <h4 style="color: var(--white);">Orden GF-0418</h4>
+            <p style="color: var(--gray);">Pl&aacute;sticos G&amp;C S.A.S.</p>
+            <button class="btn btn-accent btn-sm" style="margin-top: 12px;">Ver Detalle</button>
+          </div>
+        </div>
+        <div class="component-meta" style="border-color: var(--medium-gray);">
+          <h4 style="color: var(--white);">Order Card</h4>
+          <p style="color: var(--gray);">Resumen de orden con estado y m&eacute;trica</p>
+        </div>
+      </div>
+
+      <!-- Data Display -->
+      <div class="component-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="component-preview" style="background: var(--dark-gray); flex-direction: column; gap: 4px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray);">
+            <span style="color: var(--cyan);">L*</span> 54.2 &nbsp;
+            <span style="color: var(--magenta);">a*</span> -12.8 &nbsp;
+            <span style="color: var(--yellow);">b*</span> 36.1
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--gray);">
+            <span style="color: var(--cyan);">C</span> 100 &nbsp;
+            <span style="color: var(--magenta);">M</span> 0 &nbsp;
+            <span style="color: var(--yellow);">Y</span> 0 &nbsp;
+            <span style="color: var(--white);">K</span> 0
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 18px; font-weight: 600; color: var(--green); margin-top: 8px;">&Delta;E = 1.8 &#10003;</div>
+        </div>
+        <div class="component-meta" style="border-color: var(--medium-gray);">
+          <h4 style="color: var(--white);">Colorimetry Data</h4>
+          <p style="color: var(--gray);">L*a*b*, CMYK values, Delta-E display</p>
+        </div>
+      </div>
+
+      <!-- CMYKOGV Line -->
+      <div class="component-card" style="background: var(--dark-gray); border-color: var(--medium-gray);">
+        <div class="component-preview" style="background: var(--dark-gray); flex-direction: column; gap: 16px; align-items: stretch;">
+          <div class="cmy-line" style="border-radius: 2px;"></div>
+          <div class="cmykogv-line" style="border-radius: 2px;"></div>
+          <div style="height: 3px; background: linear-gradient(90deg, var(--black) 0%, var(--cyan) 100%); border-radius: 2px;"></div>
+        </div>
+        <div class="component-meta" style="border-color: var(--medium-gray);">
+          <h4 style="color: var(--white);">Accent Lines</h4>
+          <p style="color: var(--gray);">CMY, CMYKOGV, y gradient para decoraci&oacute;n</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="cmy-line"></div>
+  <footer style="background: var(--black); color: var(--gray); padding: 48px 80px; text-align: center;">
+    <div style="font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 8px;">Grafiflex</div>
+    <div style="font-size: 12px; color: var(--medium-gray); margin-bottom: 24px;">Brand Guidelines v1.0 &middot; Abril 2026</div>
+    <div style="font-size: 11px; color: var(--medium-gray);">
+      Envigado &middot; Barranquilla &middot; Cali &middot; Bogot&aacute; DC<br>
+      &copy; 2026 Grafiflex. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Copy color on click
+  document.querySelectorAll('.color-swatch').forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      const hint = swatch.querySelector('.copy-hint');
+      if (hint) {
+        hint.textContent = 'Copied!';
+        setTimeout(() => hint.textContent = 'Click to copy', 1500);
+      }
+    });
+  });
+
+  // Active nav state
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.nav a').forEach(a => {
+          a.style.color = a.getAttribute('href') === '#' + entry.target.id ? '#00AEEF' : '';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
