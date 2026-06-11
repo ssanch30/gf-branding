@@ -141,7 +141,7 @@ Use for: order numbers (`GF-2026-0418`), ΔE values, L*a*b* coordinates, LPI, do
 
 ### FlexoLab Logo
 
-**Symbol:** Geometric diamond/rhombus shape with interlocking angular **F** (left, structural) and **L** (right, dynamic) shapes. The cyan (L) portion features **halftone dots** — a direct reference to flexographic screening technology.
+**Symbol:** Geometric diamond/rhombus shape with interlocking angular **F** (left, structural) and **L** (right, dynamic) shapes. The cyan (L) portion features **halftone dots** — round dots in a size-graded fade plus a dot-chain along the F/L seam (the "bigger dots" artwork, official since 2026-06) — a direct reference to flexographic screening technology.
 
 **Wordmark:** "FlexoLab" in **Rustica Bold Italic** (same font family as Grafiflex). "Lab" is mixed case (not "LAB"). The italic gives it the same dynamic energy as the Grafiflex wordmark, reinforcing sub-brand unity.
 
