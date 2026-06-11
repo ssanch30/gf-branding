@@ -135,7 +135,10 @@
     right: 0;
     width: 400px;
     height: 100%;
-    background: linear-gradient(135deg, transparent 0%, rgba(0,174,239,0.05) 30%, rgba(236,0,140,0.05) 60%, rgba(255,242,0,0.03) 100%);
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1.3px);
+    background-size: 9px 9px;
+    -webkit-mask-image: linear-gradient(225deg, black, transparent 60%);
+    mask-image: linear-gradient(225deg, black, transparent 60%);
   }
 
   .hero h1 {
@@ -751,7 +754,8 @@
   ::-webkit-scrollbar-thumb { background: var(--light-gray); border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--gray); }
 
-  /* CMY Accent line */
+  /* CMY / CMYKOGV accent lines: SOLID segments only (hard color stops).
+     Brand colors must NEVER blend into each other. */
   .cmy-line {
     height: 3px;
     background: linear-gradient(90deg, var(--cyan) 0%, var(--cyan) 33%, var(--magenta) 33%, var(--magenta) 66%, var(--yellow) 66%, var(--yellow) 100%);
@@ -922,7 +926,18 @@
         </object>
         <div class="logo-box-label" style="color: var(--gray);">Vertical &mdash; Fondo claro</div>
       </div>
+      <div class="logo-box logo-box-light">
+        <img src="logo-horizontal-mono-black.svg" alt="Logo Grafiflex monocrom&aacute;tico negro" style="max-width: 380px; width: 100%;">
+        <div class="logo-box-label" style="color: var(--gray);">Monocrom&aacute;tico &mdash; 1 tinta negro</div>
+      </div>
+      <div class="logo-box logo-box-dark">
+        <img src="logo-horizontal-mono-white.svg" alt="Logo Grafiflex monocrom&aacute;tico blanco" style="max-width: 380px; width: 100%;">
+        <div class="logo-box-label" style="color: var(--gray);">Monocrom&aacute;tico &mdash; 1 tinta blanco</div>
+      </div>
     </div>
+    <p style="font-size: 13px; color: var(--gray); margin-top: 12px;">
+      Versi&oacute;n monocrom&aacute;tica (1 tinta) para sellos, grabados, fax, documentos B/N y soportes de una sola tinta. Tambi&eacute;n disponible vertical (<code>logo-vertical-mono-*</code>) y s&iacute;mbolo solo (<code>logo-symbol-mono-*</code>).
+    </p>
 
     <!-- Symbol Only -->
     <div class="mt-32">
@@ -1286,6 +1301,9 @@
     <div class="mt-32">
       <div class="color-group-title">CMYKOGV Accent Line</div>
       <div class="cmykogv-line" style="height: 8px; border-radius: 4px;"></div>
+      <p style="font-size: 13px; color: var(--gray); margin-top: 12px;">
+        Siempre <strong>bloques de color s&oacute;lido</strong> &mdash; los colores de marca <strong>nunca se degradan</strong> entre s&iacute;. Prohibido cualquier gradiente que mezcle CMYK u OGV.
+      </p>
       <p class="text-sm text-gray" style="margin-top: 8px;">Usar como elemento decorativo en headers, dividers y material corporativo.</p>
     </div>
 
@@ -1629,7 +1647,7 @@
           <div class="cmykogv-line" style="width: 80%; height: 4px; border-radius: 2px;"></div>
         </div>
         <div style="padding: 16px;">
-          <p style="font-size: 12px; color: var(--medium-gray);">L&iacute;nea CMYKOGV como separador decorativo. Usar en headers, footers y divisiones de secci&oacute;n.</p>
+          <p style="font-size: 12px; color: var(--medium-gray);">L&iacute;nea CMYKOGV como separador decorativo &mdash; segmentos s&oacute;lidos, nunca degradado. Usar con moderaci&oacute;n en headers, footers y divisiones de secci&oacute;n.</p>
         </div>
       </div>
       <div class="product-card" style="padding: 0; overflow: hidden;">
@@ -1747,6 +1765,33 @@
         <div style="flex: 1; background: var(--white); border: 1px solid var(--lighter-gray); border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
           <img src="flexolab-symbol-light.svg" alt="FlexoLab s&iacute;mbolo, fondo claro" style="width: 120px; height: 120px;">
           <span style="font-size: 11px; color: var(--medium-gray); text-transform: uppercase; letter-spacing: 0.1em;">S&iacute;mbolo &mdash; Fondo claro</span>
+        </div>
+      </div>
+
+      <!-- Endorsement lockup -->
+      <div class="flex-row" style="gap: 24px; margin-bottom: 24px;">
+        <div style="flex: 1; background: var(--black); border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+          <img src="flexolab-by-grafiflex-dark.svg" alt="FlexoLab by Grafiflex, fondo oscuro" style="width: 100%; max-width: 280px;">
+          <span style="font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em;">by Grafiflex &mdash; Fondo oscuro</span>
+        </div>
+        <div style="flex: 1; background: var(--white); border: 1px solid var(--lighter-gray); border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+          <img src="flexolab-by-grafiflex-light.svg" alt="FlexoLab by Grafiflex, fondo claro" style="width: 100%; max-width: 280px;">
+          <span style="font-size: 11px; color: var(--medium-gray); text-transform: uppercase; letter-spacing: 0.1em;">by Grafiflex &mdash; Fondo claro</span>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: var(--gray); margin-bottom: 24px;">
+        Lockup de endoso <strong>&ldquo;by Grafiflex&rdquo;</strong> (Rustica Bold Italic, punto de la &ldquo;i&rdquo; en cyan) &mdash; usar en login, portal de clientes y contextos donde FlexoLab aparece sin la marca madre. Versi&oacute;n monocrom&aacute;tica del lockup: <code>flexolab-lockup-horizontal-mono-*</code> / <code>flexolab-lockup-vertical-mono-*</code> (los puntos de trama se calan del s&oacute;lido, nunca se eliminan).
+      </p>
+
+      <!-- Mono lockups -->
+      <div class="flex-row" style="gap: 24px; margin-bottom: 24px;">
+        <div style="flex: 1; background: var(--white); border: 1px solid var(--lighter-gray); border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+          <img src="flexolab-lockup-horizontal-mono-black.svg" alt="FlexoLab monocrom&aacute;tico negro" style="width: 100%; max-width: 320px;">
+          <span style="font-size: 11px; color: var(--medium-gray); text-transform: uppercase; letter-spacing: 0.1em;">Monocrom&aacute;tico &mdash; 1 tinta negro</span>
+        </div>
+        <div style="flex: 1; background: var(--cyan); border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+          <img src="flexolab-lockup-horizontal-mono-white.svg" alt="FlexoLab monocrom&aacute;tico blanco sobre cyan" style="width: 100%; max-width: 320px;">
+          <span style="font-size: 11px; color: var(--white); text-transform: uppercase; letter-spacing: 0.1em;">Monocrom&aacute;tico &mdash; 1 tinta blanco</span>
         </div>
       </div>
 
@@ -2094,11 +2139,10 @@
         <div class="component-preview" style="background: var(--dark-gray); flex-direction: column; gap: 16px; align-items: stretch;">
           <div class="cmy-line" style="border-radius: 2px;"></div>
           <div class="cmykogv-line" style="border-radius: 2px;"></div>
-          <div style="height: 3px; background: linear-gradient(90deg, var(--black) 0%, var(--cyan) 100%); border-radius: 2px;"></div>
         </div>
         <div class="component-meta" style="border-color: var(--medium-gray);">
           <h4 style="color: var(--white);">Accent Lines</h4>
-          <p style="color: var(--gray);">CMY, CMYKOGV, y gradient para decoraci&oacute;n</p>
+          <p style="color: var(--gray);">CMY y CMYKOGV &mdash; segmentos s&oacute;lidos, nunca degradado</p>
         </div>
       </div>
     </div>

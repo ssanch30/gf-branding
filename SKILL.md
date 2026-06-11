@@ -67,7 +67,8 @@ The brand aesthetic is **predominantly monochromatic** — grays and blacks that
 - **Magenta for errors** (not red) — it's part of the CMYK identity
 - **Yellow with caution** — low contrast, only on dark backgrounds
 - **OGV for functional states** — Green=success, Orange=warning, Violet=special
-- **CMYKOGV line** — a thin gradient line (C→M→Y→K→O→G→V) used as decorative separator in headers/footers
+- **CMYKOGV line** — a thin line of **discrete solid color blocks** (C·M·Y·K·O·G·V) used sparingly as decorative separator in headers/footers
+- **NEVER blend brand colors into a gradient** — CMYK/OGV accents always appear as solid segments with hard edges. Any gradient that mixes two or more brand colors is prohibited
 
 ### CSS Variables
 ```css
@@ -154,6 +155,8 @@ Use for: order numbers (`GF-2026-0418`), ΔE values, L*a*b* coordinates, LPI, do
 - `flexolab-symbol-dark.svg` — White F + Cyan L (for dark backgrounds)
 - `flexolab-lockup-horizontal-light.svg` / `-dark.svg` — Symbol + wordmark, horizontal
 - `flexolab-lockup-vertical-light.svg` / `-dark.svg` — Symbol above wordmark, vertical
+- `flexolab-by-grafiflex-dark.svg` / `-light.svg` — Endorsement lockup with "by Grafiflex" line (Rustica Bold Italic, cyan i-dot). Used on the FlexoLab login page and wherever FlexoLab appears without the parent brand
+- `flexolab-symbol-mono-{black,white}.svg`, `flexolab-lockup-horizontal-mono-{black,white}.svg`, `flexolab-lockup-vertical-mono-{black,white}.svg` — One-ink versions. The halftone dots are KNOCKED OUT of the solid (mask), so the screening texture survives in one color
 
 **Lockup geometry:** Gap between symbol and wordmark is **15% of the symbol's visual width** (both orientations).
 
@@ -239,7 +242,7 @@ Based on **4px multiples**:
 ## Patterns & Textures
 
 - **Halftone dots:** Reference to flexographic screening. Use at low opacity as background texture.
-- **CMYKOGV line:** Thin gradient stripe as decorative separator in headers, footers, section divisions.
+- **CMYKOGV line:** Thin stripe of discrete solid color segments (never a blended gradient) as decorative separator in headers, footers, section divisions. Use sparingly — one per surface at most.
 - **Registration marks:** Stylized as subtle decorative elements.
 
 ---
@@ -266,6 +269,11 @@ Based on **4px multiples**:
 | `palette.background.paper` | `#FFFFFF` | Cards, surfaces |
 | Sidebar background | `#1A1A1A` | Dark sidebar |
 | Active nav indicator | 2px left border in Cyan | Current page |
+
+### FlexoLab Login Page
+- Background: `#1A1A1A` with a subtle halftone dot field (white dots ~13% opacity, 9px grid) fading from the top-left corner — flexographic screening reference. No color bar, no brand-color gradients.
+- Logo: `flexolab-by-grafiflex-dark.svg` centered above the card.
+- Card: white, 12px radius, soft shadow. Primary button: Cyan `#00AEEF`.
 
 ### FlexoLab UI Patterns
 - Sidebar: dark (#1A1A1A) with gray text, active item has cyan left border
@@ -309,5 +317,8 @@ Key files:
 - `flexolab-symbol-dark.svg` — FlexoLab symbol (white F + cyan L, for dark backgrounds)
 - `flexolab-lockup-horizontal-{light,dark}.svg` — FlexoLab full lockup, horizontal
 - `flexolab-lockup-vertical-{light,dark}.svg` — FlexoLab full lockup, vertical
+- `flexolab-by-grafiflex-{dark,light}.svg` — FlexoLab + "by Grafiflex" endorsement lockup
+- `logo-{horizontal,vertical,symbol}-mono-{black,white}.svg` — Grafiflex one-ink versions
+- `flexolab-{symbol,lockup-horizontal,lockup-vertical}-mono-{black,white}.svg` — FlexoLab one-ink versions (halftone knocked out)
 - `logo-30-*.png` — 30th anniversary variants
 - `grafiflex-brand-guidelines.html` — Full interactive guidelines reference
