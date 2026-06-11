@@ -138,6 +138,31 @@ Use for: order numbers (`GF-2026-0418`), ΔE values, L*a*b* coordinates, LPI, do
 - Never reduce below minimum size (120px / 30mm horizontal, 24px / 8mm symbol only)
 - Maintain clear space around logo
 
+### FlexoLab Logo
+
+**Symbol:** Geometric diamond/rhombus shape with interlocking angular **F** (left, structural) and **L** (right, dynamic) shapes. The cyan (L) portion features **halftone dots** — a direct reference to flexographic screening technology.
+
+**Wordmark:** "FlexoLab" in **Rustica Bold Italic** (same font family as Grafiflex). "Lab" is mixed case (not "LAB"). The italic gives it the same dynamic energy as the Grafiflex wordmark, reinforcing sub-brand unity.
+
+**Color:**
+- F shape: Black `#1A1A1A` (positive) or White `#FFFFFF` (negative)
+- L shape: Always Cyan `#00AEEF`
+- Halftone dots on cyan portion: same color as the F shape
+
+**Variants:**
+- `flexolab-symbol-light.svg` — Black F + Cyan L (for light/white backgrounds)
+- `flexolab-symbol-dark.svg` — White F + Cyan L (for dark backgrounds)
+- `flexolab-lockup-horizontal-light.svg` / `-dark.svg` — Symbol + wordmark, horizontal
+- `flexolab-lockup-vertical-light.svg` / `-dark.svg` — Symbol above wordmark, vertical
+
+**Lockup geometry:** Gap between symbol and wordmark is **15% of the symbol's visual width** (both orientations).
+
+**Rules:**
+- The halftone dot pattern must never be removed or simplified
+- The F and L interlock must remain intact — never separate the shapes
+- Cyan on the L shape is non-negotiable (matches the Grafiflex "i" dot accent)
+- Minimum size: 120px / 30mm (horizontal lockup), 24px / 8mm (symbol only)
+
 ### FlexoLab Name Format
 | Context | Format |
 |---------|--------|
@@ -279,6 +304,10 @@ Key files:
 - `logo-horizontal-light-r7.svg` — Horizontal, dark text (for light backgrounds)
 - `logo-vertical-dark-v4.svg` — Vertical, white text
 - `logo-vertical-light-r2.svg` — Vertical, dark text
-- `logo-symbol.svg` — Symbol only (CMY triangle)
+- `logo-symbol.svg` — Grafiflex symbol only (CMY triangle)
+- `flexolab-symbol-light.svg` — FlexoLab symbol (black F + cyan L, for light backgrounds)
+- `flexolab-symbol-dark.svg` — FlexoLab symbol (white F + cyan L, for dark backgrounds)
+- `flexolab-lockup-horizontal-{light,dark}.svg` — FlexoLab full lockup, horizontal
+- `flexolab-lockup-vertical-{light,dark}.svg` — FlexoLab full lockup, vertical
 - `logo-30-*.png` — 30th anniversary variants
 - `grafiflex-brand-guidelines.html` — Full interactive guidelines reference
