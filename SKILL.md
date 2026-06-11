@@ -155,7 +155,7 @@ Use for: order numbers (`GF-2026-0418`), ΔE values, L*a*b* coordinates, LPI, do
 - `flexolab-symbol-dark.svg` — White F + Cyan L (for dark backgrounds)
 - `flexolab-lockup-horizontal-light.svg` / `-dark.svg` — Symbol + wordmark, horizontal
 - `flexolab-lockup-vertical-light.svg` / `-dark.svg` — Symbol above wordmark, vertical
-- `flexolab-by-grafiflex-dark.svg` / `-light.svg` — Endorsement lockup with "by Grafiflex" line (Rustica Bold Italic, cyan i-dot). Used on the FlexoLab login page and wherever FlexoLab appears without the parent brand
+- `flexolab-by-grafiflex-{dark,light}.svg` (horizontal) and `flexolab-by-grafiflex-vertical-{dark,light}.svg` — Endorsement lockups with "by Grafiflex" line (Rustica Bold Italic, cyan i-dot). The VERTICAL dark version is the login page logo; use wherever FlexoLab appears without the parent brand
 - `flexolab-symbol-mono-{black,white}.svg`, `flexolab-lockup-horizontal-mono-{black,white}.svg`, `flexolab-lockup-vertical-mono-{black,white}.svg` — One-ink versions. The halftone dots are KNOCKED OUT of the solid (mask), so the screening texture survives in one color
 
 **Lockup geometry:** Gap between symbol and wordmark is **15% of the symbol's visual width** (both orientations).
@@ -272,7 +272,7 @@ Based on **4px multiples**:
 
 ### FlexoLab Login Page
 - Background: `#1A1A1A` with a subtle halftone dot field (white dots ~13% opacity, 9px grid) fading from the top-left corner — flexographic screening reference. No color bar, no brand-color gradients.
-- Logo: `flexolab-by-grafiflex-dark.svg` centered above the card.
+- Logo: `flexolab-by-grafiflex-vertical-dark.svg` centered above the card (~170px wide).
 - Card: white, 12px radius, soft shadow. Primary button: Cyan `#00AEEF`.
 
 ### FlexoLab UI Patterns
@@ -317,7 +317,7 @@ Key files:
 - `flexolab-symbol-dark.svg` — FlexoLab symbol (white F + cyan L, for dark backgrounds)
 - `flexolab-lockup-horizontal-{light,dark}.svg` — FlexoLab full lockup, horizontal
 - `flexolab-lockup-vertical-{light,dark}.svg` — FlexoLab full lockup, vertical
-- `flexolab-by-grafiflex-{dark,light}.svg` — FlexoLab + "by Grafiflex" endorsement lockup
+- `flexolab-by-grafiflex-{dark,light}.svg` / `flexolab-by-grafiflex-vertical-{dark,light}.svg` — FlexoLab + "by Grafiflex" endorsement lockups (vertical dark = login logo)
 - `logo-{horizontal,vertical,symbol}-mono-{black,white}.svg` — Grafiflex one-ink versions
 - `flexolab-{symbol,lockup-horizontal,lockup-vertical}-mono-{black,white}.svg` — FlexoLab one-ink versions (halftone knocked out)
 - `logo-30-*.png` — 30th anniversary variants
