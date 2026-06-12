@@ -156,7 +156,7 @@ Use for: order numbers (`GF-2026-0418`), ΔE values, L*a*b* coordinates, LPI, do
 - `flexolab-lockup-horizontal-light.svg` / `-dark.svg` — Symbol + wordmark, horizontal
 - `flexolab-lockup-vertical-light.svg` / `-dark.svg` — Symbol above wordmark, vertical
 - `flexolab-by-grafiflex-{dark,light}.svg` (horizontal) and `flexolab-by-grafiflex-vertical-{dark,light}.svg` — Endorsement lockups with "by Grafiflex" line (Rustica Bold Italic, cyan i-dot). The VERTICAL dark version is the login page logo; use wherever FlexoLab appears without the parent brand
-- `flexolab-symbol-mono-{black,white}.svg`, `flexolab-lockup-horizontal-mono-{black,white}.svg`, `flexolab-lockup-vertical-mono-{black,white}.svg` — One-ink versions. The halftone dots are KNOCKED OUT of the solid (mask), so the screening texture survives in one color
+- `flexolab-symbol-mono-{black,white}.svg`, `flexolab-lockup-horizontal-mono-{black,white}.svg`, `flexolab-lockup-vertical-mono-{black,white}.svg` — One-ink versions. The seam holes are KNOCKED OUT of the solid (mask derived from the inverted-dots artwork: F∩L minus the dot shapes), so the screening texture survives in one color
 
 **Lockup geometry:** Gap between symbol and wordmark is **15% of the symbol's visual width** (both orientations).
 
