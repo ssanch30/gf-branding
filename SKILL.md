@@ -141,7 +141,10 @@ Use for: order numbers (`GF-2026-0418`), ΔE values, L*a*b* coordinates, LPI, do
 
 ### FlexoLab Logo
 
-**Symbol:** Geometric diamond/rhombus shape with interlocking angular **F** (left, structural) and **L** (right, dynamic) shapes. At the F/L seam the F **dissolves into the cyan** through an inverted-dot halftone: scalloped cyan dots bridge the edge, then F-colored square holes shrink inside the solid cyan (shadow-end of a screened vignette). The "inverted dots" artwork is official since 2026-06-11; the same geometry serves both modes (holes render white on dark, black on light) — a direct reference to flexographic screening technology.
+**Symbol:** Geometric diamond/rhombus shape with interlocking angular **F** (left, structural) and **L** (right, dynamic) shapes. The F/L seam carries a halftone transition whose construction follows REAL PRINT PHYSICS, so the two modes are deliberately different:
+- **Light/positive** ("bigger dots" artwork): the black F screens **over** the cyan solid — black halftone dots shrinking on cyan. Correct representation of ink overprinting ink on white stock.
+- **Dark/negative** ("inverted dots" artwork): the white (substrate) dissolves **into** the cyan — scalloped cyan dots bridge the edge, then white square holes shrink inside the solid. Correct representation of cyan printing over substrate.
+Never swap these: holes only represent substrate (white); a dark halftone over cyan only represents overprint. Both artworks official since 2026-06-11.
 
 **Wordmark:** "FlexoLab" in **Rustica Bold Italic** (same font family as Grafiflex). "Lab" is mixed case (not "LAB"). The italic gives it the same dynamic energy as the Grafiflex wordmark, reinforcing sub-brand unity.
 
